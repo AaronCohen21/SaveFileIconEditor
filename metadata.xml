@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <name>Save File Icon Editor</name>
+    <directory>save file icon editor</directory>
+    <id>2521782304</id>
+    <description>[h1]Use Any Save File Icon You Want![/h1]
+This mod allows you to switch between any save file icons you want, without limiting what's displayed based on your progress. It even allows you to go back to previous icons if you've progressed further along in the game (ex. you're on mega satan but you want it to show blue baby). This way you aren't limited to just using what the game gives you, but instead, you can make it more personalized.
+
+[h1]How Do I Use It?[/h1]
+[olist]
+[*]Initially after installing the mod, you'll know that its working if all three save file icons are overridden to show the default basement icon.
+
+[*]After you see that the mod is working, I highly recommend disabling all mods other than This One, and Mod Config Menu (see disclaimer for why)
+
+[*]Now that you've disabled all of your other mods, you're going to need to enable the editor. To do this, exit your game, and go to your game's settings and open the properties panel. Now enter [b]--luadebug[/b] into your [b]Launch Options[/b]. This is necessary to give the editor the permissions needed to edit the mod's animation files (again, see the disclaimer).
+
+[*]You can now re-open your game. To edit your icons, start a new run and press &quot;L&quot; to open Mod Config Menu, and navigate to the &quot;Save File Icons&quot; category. Here you will find the editor.
+
+[*]Once you have made your changes, press the &quot;Save Changes&quot; button and restart the game to see your changes take place.
+
+[*]When you are happy with your changes, exit your game again, and remove [b]--luadebug[/b] from your [b]Launch Options[/b]. Now you can re-open your game, and re-enable all of your other mods. Removing [b]--luadebug[/b] only disables the editor, but the changes you have made to your icons will stay unless you disable this mod. (see why it is important to disable [b]--luadebug[/b] in the disclaimer)
+[/olist]
+
+[h1]Disclaimer[/h1]
+[b]--luadebug[/b] allows Lua from The Binding of Isaac many more permissions than it normally has, including reading/writing to any part of your hard drive! If you decide to use this mod and enable [b]--luadebug[/b], please be cautious as I cannot be responsible for any malicious mods out there that might take advantage of this. Once you are finished editing your save file icons, I highly recommend removing [b]--luadebug[/b] from your [b]Launch Options[/b]. This will disable the editor only, but your changes will still be visible.
+
+[h1]When I Try To Save My Changes I Get An Error[/h1]
+Don’t worry! This is a common problem that can happen if you have a separate hard drive for all of your steam games, or if your mods folder is stored somewhere unusual. Whatever the case, to fix this all you need to do is open the &quot;main.lua&quot; file for this mod, and insert the following code in the position indicated to you by the file (this should be somewhere around line 31).
+[code]
+system = &quot;custom&quot;
+filePath = &quot;FULL PATH TO YOUR MODS FOLDER&quot;
+[/code]
+Replace [b]FULL PATH TO YOUR MODS FOLDER[/b] with the entire file path to your game's &quot;mods&quot; folder, but be sure to keep the quotation marks.  As well, make sure to use two backslashes instead of one (ex. `C:\\Program Files\\Steam\\steamapps\\common\\The Binding of Isaac Rebirth\\mods`). If you're playing Repentance, you can find this folder by clicking &quot;browse local files&quot; under your game's manage section.
+
+[h1]WANT TO VIEW THE CODE?[/h1]
+Head over to the mod's official GitHub page [url=https://github.com/AaronCohen21/SaveFileIconEditor]here[/url] if you want to see how the mod works and look at the code behind it.</description>
+    <version>1.6</version>
+    <visibility>Public</visibility>
+    <tag id="Lua"/>
+    <tag id="Tweaks"/>
+    <tag id="Graphics"/>
+</metadata>
